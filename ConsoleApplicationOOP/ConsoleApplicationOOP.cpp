@@ -10,13 +10,67 @@
 #include "WorkClass.h"
 #include "Chipsi.h"
 
+class newClass
+{
+private:
+    int one;
+    int two;
+    int three;
+public:
+    void setOne(int number)
+    {
+        one = number;
+    }
 
+    void setTwo(int number)
+    {
+        two = number;
+    }
+
+    void setThree(int number)
+    {
+        three = number;
+    }
+
+    int getOne()
+    {
+        return one;
+    }
+
+    int getTwo()
+    {
+        return two;
+    }
+
+    int getThree()
+    {
+        return three;
+    }
+
+    std::string toString()
+    {
+        std::string str = "000";
+        str[0] = one + '0';
+        str[1] = two + '0';
+        str[2] = three + '0';
+        return str;
+    }
+};
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    WorkClass workClass;
-    workClass.startWork();//Теперь создание всех классов производится в классе WorkClass
+    newClass a1;
+    a1.setOne(6);
+    a1.setTwo(6);
+    a1.setThree(6);
+
+    std::string b1;
+    b1 = a1.toString();
+    std::cout << b1;
+
+    //setlocale(LC_ALL, "Russian");
+    //WorkClass workClass;
+    //workClass.startWork();//Теперь создание всех классов производится в классе WorkClass
 
 
    //std::cout << "Hello Привет World!\n";
